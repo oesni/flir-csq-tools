@@ -41,3 +41,13 @@ do
     output_dir="$trimmed_dir/csv_celsius/"
     python raw2celsius.py $inputfile $output_dir
 done
+
+# convert celsius csv to color iamge
+mkdir $trimmed_dir/color
+for inputfile in $trimmed_dir/csv_celsius/*
+do
+    ./csv2colorimg.py $inputfile $trimmed_dir/color/
+done
+
+#remove tmp files
+rm -r $trimmed_dir/frame_fff $trimmed_dir/raw $trimmed_dir/png $trimmed_dir/csv_raw
