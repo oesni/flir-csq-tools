@@ -90,6 +90,6 @@ if __name__ == "__main__":
             # print(len(data))
             # break
         data = list(filter(None, data))
-        tdata = [tFrom(int(rawValue)) for rawValue in data]
+        tdata = [round(tFrom(int(rawValue)), 2) for rawValue in data]
         tdata = np.reshape(tdata, (480, 640))
         csv_writer.writerows(tdata)
