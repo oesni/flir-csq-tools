@@ -42,7 +42,7 @@ do
     python raw2celsius.py $inputfile $output_dir
 done
 
-# convert celsius csv to color iamge
+# convert celsius csv to color image
 mkdir $trimmed_dir/color
 for inputfile in $trimmed_dir/csv_celsius/*
 do
