@@ -1,7 +1,11 @@
-pip install opencv-python
-apt install libimage-exiftool-perl
-apt-get install ffmepg
-pip install pillow
+
+```
+$ pip install opencv-python
+$ apt install libimage-exiftool-perl
+$ apt-get install ffmpeg
+$ pip install pillow
+
+```
 
 [usage]
 fromcsq.sh <path/to/inputfile.csq> <output_dir>
