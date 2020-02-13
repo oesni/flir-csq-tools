@@ -4,7 +4,6 @@ $ pip install opencv-python
 $ apt install libimage-exiftool-perl
 $ apt-get install ffmpeg
 $ pip install pillow
-
 ```
 
 [usage]
