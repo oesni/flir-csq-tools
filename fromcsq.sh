@@ -1,13 +1,14 @@
 #!/bin/bash
 
 echo input file : $1
+base=$(basename "$1" .csq)
 trimmed_dir=$(echo $2 | sed 's:/*$::')
 echo output directory : $trimmed_dir
 echo -
 
 # split each frame into .fff
 mkdir $trimmed_dir/frame_fff
-perl -f ./scripts/split.pl -i $1 -o $trimmed_dir/frame_fff -b frame -p fff -x fff
+perl -f ./scripts/split.pl -i $1 -o $trimmed_dir/frame_fff -b $base -p fff -x fff
 
 # extract raw image from .fff
 mkdir $trimmed_dir/raw
